@@ -1,6 +1,6 @@
-var User = require("../model/user/user.js");
-mongoose = require('mongoose');
-Ads      = require('../model/Ads/Ads');
+const
+mongoose = require('mongoose'),
+Ads      = require('../model/Ads/Ads'),
 ObjectId = require('mongodb').ObjectId;
 
 
