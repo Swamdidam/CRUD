@@ -51,7 +51,23 @@ function route(app) {
             })
     });
     
+    //===============================================================================================
+    // editing by Id
+    //=============================================================================================== 
     
+    app.get('/find/:item', (req, res)=>{
+        
+        // console.log(req.params.phone)
+        return User.find({item:req.params.item},[])
+            .then(doc =>{
+                // console.log(doc)
+                return res.status(200).json({status:200, message:"item's details below", doc:doc})
+            })
+            
+            .catch(err=>{
+                return res.status(400).json(err)
+            })
+    })
 }
 
 
